@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Syafiin | Data Automation & Data Entry Specialist</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/scrollreveal"></script>
+<style>
+html{scroll-behavior:smooth}
+.glow{box-shadow:0 0 25px rgba(59,130,246,0.6)}
+</style>
+</head>
+
+<body class="bg-black text-white font-sans">
+
+<!-- NAVBAR -->
+<header class="fixed w-full bg-black/70 backdrop-blur z-50">
+<div class="max-w-6xl mx-auto flex justify-between items-center p-4">
+<h1 class="text-xl font-bold">Syafiin.dev</h1>
+<nav class="space-x-6 text-sm">
+<a href="#about" class="hover:text-blue-400">About</a>
+<a href="#skills" class="hover:text-blue-400">Skills</a>
+<a href="#projects" class="hover:text-blue-400">Projects</a>
+<a href="#contact" class="hover:text-blue-400">Contact</a>
+</nav>
+</div>
+</header>
+
+<!-- HERO -->
+<section class="min-h-screen flex flex-col justify-center items-center text-center px-6">
+<h2 class="text-5xl md:text-6xl font-bold mb-6">Data Automation Specialist</h2>
+<p class="text-gray-400 max-w-2xl mb-8">
+Professional Data Entry & Administrator specialized in Excel Automation, Data Processing, and Large Dataset Management.
+</p>
+<div class="flex gap-4">
+<a href="#projects" class="bg-blue-500 px-6 py-3 rounded-xl glow">View Projects</a>
+<a href="cv.pdf" class="border px-6 py-3 rounded-xl">Download CV</a>
+</div>
+</section>
+
+<!-- STATS -->
+<section class="py-20 bg-gray-950">
+<h2 class="text-center text-3xl font-bold mb-12">Professional Statistics</h2>
+<div class="grid md:grid-cols-3 gap-10 max-w-5xl mx-auto text-center">
+<div>
+<h3 id="dataCount" class="text-4xl font-bold text-blue-400">0</h3>
+<p class="text-gray-400">Data Processed</p>
+</div>
+<div>
+<h3 id="automationCount" class="text-4xl font-bold text-blue-400">0</h3>
+<p class="text-gray-400">Automation Systems Built</p>
+</div>
+<div>
+<h3 id="accuracy" class="text-4xl font-bold text-blue-400">0</h3>
+<p class="text-gray-400">Accuracy Rate (%)</p>
+</div>
+</div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="py-24 max-w-4xl mx-auto px-6 text-center">
+<h2 class="text-3xl font-bold mb-6">About Me</h2>
+<p class="text-gray-400 leading-relaxed">
+I specialize in processing and managing large datasets efficiently. Using advanced Excel techniques and VBA automation, I build systems that transform manual work into fast automated workflows. I am highly detail-oriented and experienced in handling thousands of records with high accuracy.
+</p>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="py-20 bg-gray-950">
+<h2 class="text-3xl font-bold text-center mb-12">Skills</h2>
+<div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto px-6">
+<div class="bg-gray-900 p-6 rounded-2xl hover:scale-105 transition">
+<h3 class="text-xl font-semibold mb-2">Data Entry</h3>
+<p class="text-gray-400">High speed and accurate data input for thousands of records.</p>
+</div>
+
+<div class="bg-gray-900 p-6 rounded-2xl hover:scale-105 transition">
+<h3 class="text-xl font-semibold mb-2">Excel Automation</h3>
+<p class="text-gray-400">Building automated systems using Excel VBA Macro.</p>
+</div>
+
+<div class="bg-gray-900 p-6 rounded-2xl hover:scale-105 transition">
+<h3 class="text-xl font-semibold mb-2">Data Management</h3>
+<p class="text-gray-400">Cleaning, validating, and structuring large datasets.</p>
+</div>
+</div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="py-24 max-w-6xl mx-auto px-6">
+<h2 class="text-3xl font-bold text-center mb-16">Project Gallery</h2>
+
+<div class="grid md:grid-cols-2 gap-10">
+
+<div class="bg-gray-900 rounded-2xl overflow-hidden hover:scale-105 transition">
+<img src="project1.jpg" class="w-full" />
+<div class="p-6">
+<h3 class="text-xl font-semibold mb-2">Excel Automation System</h3>
+<p class="text-gray-400">Automated Excel workflow capable of processing thousands of rows instantly.</p>
+</div>
+</div>
+
+<div class="bg-gray-900 rounded-2xl overflow-hidden hover:scale-105 transition">
+<img src="project2.jpg" class="w-full" />
+<div class="p-6">
+<h3 class="text-xl font-semibold mb-2">Customer Database</h3>
+<p class="text-gray-400">Structured database system with automatic search and reporting.</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="py-24 bg-gray-950 text-center">
+<h2 class="text-3xl font-bold mb-6">Let's Work Together</h2>
+<p class="text-gray-400 mb-8">Open for remote opportunities and freelance projects.</p>
+
+<div class="space-y-2">
+<p>Email: your@email.com</p>
+<p>LinkedIn: linkedin.com/in/yourname</p>
+<p>Upwork: upwork.com/freelancers/yourname</p>
+</div>
+</section>
+
+<footer class="text-center py-6 text-gray-600">© 2026 Syafiin Portfolio</footer>
+
+<script>
+function counter(id,target){
+let count=0
+let step=target/100
+let interval=setInterval(()=>{
+count+=step
+if(count>=target){count=target;clearInterval(interval)}
+document.getElementById(id).innerText=Math.floor(count).toLocaleString()
+},20)
+}
+
+window.onload=()=>{
+counter('dataCount',10000)
+counter('automationCount',15)
+counter('accuracy',99)
+}
+
+ScrollReveal().reveal('section',{distance:'40px',duration:1000,origin:'bottom',interval:200});
+</script>
+
+</body>
+</html>
