@@ -12,7 +12,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-body{font-family:Inter,sans-serif;background:#020617}
+
+body{
+font-family:Inter,sans-serif;
+background:#020617
+}
 
 #particles-js{
 position:fixed;
@@ -25,7 +29,8 @@ body::after{
 content:"";
 position:fixed;
 inset:0;
-background:radial-gradient(circle at 20% 20%,rgba(59,130,246,.15),transparent 40%),
+background:
+radial-gradient(circle at 20% 20%,rgba(59,130,246,.15),transparent 40%),
 radial-gradient(circle at 80% 80%,rgba(139,92,246,.15),transparent 40%),
 #020617;
 z-index:-1
@@ -37,13 +42,30 @@ background:linear-gradient(135deg,#60a5fa,#22d3ee,#a78bfa);
 color:transparent
 }
 
-.card{transition:.35s}
-.card:hover{transform:translateY(-10px) scale(1.03);box-shadow:0 25px 50px rgba(0,0,0,.6)}
+.card{
+transition:.35s
+}
 
-.skillbar{height:10px;background:#1e293b;border-radius:20px;overflow:hidden}
-.skillfill{height:100%;background:linear-gradient(90deg,#3b82f6,#22d3ee,#6366f1)}
+.card:hover{
+transform:translateY(-10px) scale(1.03);
+box-shadow:0 25px 50px rgba(0,0,0,.6)
+}
 
-.glow{box-shadow:0 0 35px rgba(59,130,246,.4)}
+.skillbar{
+height:10px;
+background:#1e293b;
+border-radius:20px;
+overflow:hidden
+}
+
+.skillfill{
+height:100%;
+background:linear-gradient(90deg,#3b82f6,#22d3ee,#6366f1)
+}
+
+.glow{
+box-shadow:0 0 35px rgba(59,130,246,.4)
+}
 
 </style>
 </head>
@@ -52,10 +74,13 @@ color:transparent
 
 <div id="particles-js"></div>
 
-<header class="fixed w-full bg-slate-950/60 backdrop-blur border-b border-slate-800 z-50">
+<header class="fixed w-full bg-slate-950/70 backdrop-blur-md border-b border-slate-800 z-50">
+
 <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
 
-<h1 class="font-semibold tracking-wide">Mohammad Fauzi Hasbulloh.dev</h1>
+<h1 class="font-semibold tracking-wide">
+Mohammad Fauzi Hasbulloh.dev
+</h1>
 
 <nav class="space-x-6 text-sm">
 <a href="#about" class="hover:text-sky-400">About</a>
@@ -67,12 +92,13 @@ color:transparent
 </div>
 </header>
 
-<section class="min-h-screen flex flex-col justify-center items-center text-center px-6">
+
+<section class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-32">
 
 <img src="Zii_profil.jpg" style="width:170px;border-radius:50%;border:3px solid #3b82f6;margin-bottom:30px;">
 
 <h1 class="text-6xl md:text-7xl font-bold mb-6 gradient">
-Data Automation Engineer
+Automation & Data Processing Specialist
 </h1>
 
 <p class="text-slate-400 max-w-2xl mb-10 text-lg">
@@ -93,9 +119,12 @@ Contact
 
 </section>
 
+
 <section class="py-24 text-center">
 
-<h2 class="text-3xl font-bold mb-16">Professional Impact</h2>
+<h2 class="text-3xl font-bold mb-16">
+Professional Impact
+</h2>
 
 <div class="grid md:grid-cols-3 gap-14 max-w-5xl mx-auto">
 
@@ -117,19 +146,25 @@ Contact
 </div>
 </section>
 
+
 <section id="about" class="py-24 max-w-4xl mx-auto px-6 text-center">
 
-<h2 class="text-3xl font-bold mb-6">About Me</h2>
+<h2 class="text-3xl font-bold mb-6">
+About Me
+</h2>
 
 <p class="text-slate-400 leading-relaxed text-lg">
-I specialize in developing Excel VBA automation systems capable of processing thousands of records quickly and accurately. My focus is on building efficient data workflows, automation tools, and structured data management systems.
+I specialize in developing automation systems using Excel VBA, Word VBA, Python scripting, and workflow automation tools. My expertise focuses on building efficient data pipelines, automation tools, and structured data management systems capable of processing thousands of records with high accuracy.
 </p>
 
 </section>
 
+
 <section id="skills" class="py-24">
 
-<h2 class="text-3xl font-bold text-center mb-16">Technical Skills</h2>
+<h2 class="text-3xl font-bold text-center mb-16">
+Technical Skills
+</h2>
 
 <div class="max-w-4xl mx-auto space-y-8 px-6">
 
@@ -144,8 +179,33 @@ I specialize in developing Excel VBA automation systems capable of processing th
 </div>
 
 <div>
-<p class="mb-2">Data Processing</p>
-<div class="skillbar"><div class="skillfill" style="width:96%"></div></div>
+<p class="mb-2">Microsoft Word</p>
+<div class="skillbar"><div class="skillfill" style="width:92%"></div></div>
+</div>
+
+<div>
+<p class="mb-2">Mail Merge Automation</p>
+<div class="skillbar"><div class="skillfill" style="width:88%"></div></div>
+</div>
+
+<div>
+<p class="mb-2">Word VBA Automation</p>
+<div class="skillbar"><div class="skillfill" style="width:85%"></div></div>
+</div>
+
+<div>
+<p class="mb-2">Microsoft PowerPoint</p>
+<div class="skillbar"><div class="skillfill" style="width:87%"></div></div>
+</div>
+
+<div>
+<p class="mb-2">Python</p>
+<div class="skillbar"><div class="skillfill" style="width:75%"></div></div>
+</div>
+
+<div>
+<p class="mb-2">AutoHotkey (AHK)</p>
+<div class="skillbar"><div class="skillfill" style="width:80%"></div></div>
 </div>
 
 <div>
@@ -153,13 +213,21 @@ I specialize in developing Excel VBA automation systems capable of processing th
 <div class="skillbar"><div class="skillfill" style="width:85%"></div></div>
 </div>
 
+<div>
+<p class="mb-2">Data Processing & Automation</p>
+<div class="skillbar"><div class="skillfill" style="width:96%"></div></div>
+</div>
+
 </div>
 
 </section>
 
+
 <section id="projects" class="py-24 max-w-6xl mx-auto px-6">
 
-<h2 class="text-3xl font-bold text-center mb-16">Projects</h2>
+<h2 class="text-3xl font-bold text-center mb-16">
+Projects
+</h2>
 
 <div class="grid md:grid-cols-3 gap-10">
 
@@ -167,8 +235,12 @@ I specialize in developing Excel VBA automation systems capable of processing th
 <img src="project1.jpg" class="w-full">
 <div class="p-6">
 <h3 class="text-xl font-semibold mb-2">Excel VBA Automation System</h3>
-<p class="text-slate-400 mb-4">Macro automation system capable of cleaning, sorting, and generating reports automatically.</p>
-<a href="VBA Automation System.xlsm" class="text-sky-400 hover:underline">Download VBA Project</a>
+<p class="text-slate-400 mb-4">
+Macro automation system capable of cleaning, sorting, and generating reports automatically.
+</p>
+<a href="VBA Automation System.xlsm" class="text-sky-400 hover:underline">
+Download VBA Project
+</a>
 </div>
 </div>
 
@@ -176,7 +248,9 @@ I specialize in developing Excel VBA automation systems capable of processing th
 <img src="project2.jpg" class="w-full">
 <div class="p-6">
 <h3 class="text-xl font-semibold mb-2">Customer Data Management</h3>
-<p class="text-slate-400">Excel database system with search, filter, and structured reporting features.</p>
+<p class="text-slate-400">
+Excel database system with search, filter, and structured reporting features.
+</p>
 </div>
 </div>
 
@@ -184,7 +258,9 @@ I specialize in developing Excel VBA automation systems capable of processing th
 <img src="project3.jpg" class="w-full">
 <div class="p-6">
 <h3 class="text-xl font-semibold mb-2">Data Processing Tool</h3>
-<p class="text-slate-400">Tool designed to process large datasets and eliminate repetitive manual work.</p>
+<p class="text-slate-400">
+Tool designed to process large datasets and eliminate repetitive manual work.
+</p>
 </div>
 </div>
 
@@ -192,11 +268,16 @@ I specialize in developing Excel VBA automation systems capable of processing th
 
 </section>
 
+
 <section id="contact" class="py-24 text-center">
 
-<h2 class="text-3xl font-bold mb-6">Contact</h2>
+<h2 class="text-3xl font-bold mb-6">
+Contact
+</h2>
 
-<p class="text-slate-400 mb-10">Feel free to contact me for collaboration or job opportunities.</p>
+<p class="text-slate-400 mb-10">
+Feel free to contact me for collaboration or job opportunities.
+</p>
 
 <div class="space-y-3 text-lg">
 <p>Email: mohfauzi12@gmail.com</p>
@@ -205,9 +286,11 @@ I specialize in developing Excel VBA automation systems capable of processing th
 
 </section>
 
+
 <footer class="text-center py-8 text-slate-500">
 © 2026 Mohammad Fauzi Hasbulloh.dev
 </footer>
+
 
 <script>
 
@@ -241,7 +324,12 @@ move:{speed:0.7}
 
 }
 
-ScrollReveal().reveal('section',{distance:'60px',duration:1200,origin:'bottom',interval:200})
+ScrollReveal().reveal('section',{
+distance:'60px',
+duration:1200,
+origin:'bottom',
+interval:200
+})
 
 </script>
 
