@@ -3,21 +3,26 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Syafiin | Data Automation & Data Entry Specialist</title>
+<title>Syafiin | Data Automation Portfolio</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://unpkg.com/scrollreveal"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 <style>
-html{scroll-behavior:smooth}
-.glow{box-shadow:0 0 25px rgba(59,130,246,0.6)}
+body{font-family:Inter, sans-serif;background:#050505}
+.gradient{background:linear-gradient(135deg,#2563eb,#06b6d4,#7c3aed)}
+.glow{box-shadow:0 0 35px rgba(59,130,246,.6)}
+.card:hover{transform:translateY(-8px) scale(1.02)}
+.skillbar{height:10px;background:#1f2937;border-radius:10px;overflow:hidden}
+.skillfill{height:100%;background:linear-gradient(90deg,#3b82f6,#06b6d4)}
 </style>
 </head>
 
-<body class="bg-black text-white font-sans">
+<body class="text-white">
 
 <!-- NAVBAR -->
-<header class="fixed w-full bg-black/70 backdrop-blur z-50">
+<header class="fixed w-full bg-black/60 backdrop-blur z-50">
 <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
-<h1 class="text-xl font-bold">Syafiin.dev</h1>
+<h1 class="text-xl font-bold tracking-wide">Syafiin.dev</h1>
 <nav class="space-x-6 text-sm">
 <a href="#about" class="hover:text-blue-400">About</a>
 <a href="#skills" class="hover:text-blue-400">Skills</a>
@@ -29,30 +34,30 @@ html{scroll-behavior:smooth}
 
 <!-- HERO -->
 <section class="min-h-screen flex flex-col justify-center items-center text-center px-6">
-<h2 class="text-5xl md:text-6xl font-bold mb-6">Data Automation Specialist</h2>
-<p class="text-gray-400 max-w-2xl mb-8">
-Professional Data Entry & Administrator specialized in Excel Automation, Data Processing, and Large Dataset Management.
+<h1 class="text-6xl md:text-7xl font-bold mb-6 gradient bg-clip-text text-transparent">Data Automation Specialist</h1>
+<p class="text-gray-400 max-w-2xl mb-8 text-lg">
+I build efficient data workflows using Excel VBA, automation systems, and structured data management that can process thousands of records quickly and accurately.
 </p>
 <div class="flex gap-4">
-<a href="#projects" class="bg-blue-500 px-6 py-3 rounded-xl glow">View Projects</a>
-<a href="cv.pdf" class="border px-6 py-3 rounded-xl">Download CV</a>
+<a href="#projects" class="px-6 py-3 bg-blue-500 rounded-xl glow">View Projects</a>
+<a href="cv.pdf" class="px-6 py-3 border rounded-xl">Download CV</a>
 </div>
 </section>
 
 <!-- STATS -->
-<section class="py-20 bg-gray-950">
-<h2 class="text-center text-3xl font-bold mb-12">Professional Statistics</h2>
-<div class="grid md:grid-cols-3 gap-10 max-w-5xl mx-auto text-center">
+<section class="py-24 bg-black">
+<h2 class="text-3xl font-bold text-center mb-14">Professional Impact</h2>
+<div class="grid md:grid-cols-3 gap-12 max-w-5xl mx-auto text-center">
 <div>
-<h3 id="dataCount" class="text-4xl font-bold text-blue-400">0</h3>
-<p class="text-gray-400">Data Processed</p>
+<h3 id="dataCounter" class="text-5xl font-bold text-blue-400">0</h3>
+<p class="text-gray-400">Rows of Data Processed</p>
 </div>
 <div>
-<h3 id="automationCount" class="text-4xl font-bold text-blue-400">0</h3>
+<h3 id="automationCounter" class="text-5xl font-bold text-blue-400">0</h3>
 <p class="text-gray-400">Automation Systems Built</p>
 </div>
 <div>
-<h3 id="accuracy" class="text-4xl font-bold text-blue-400">0</h3>
+<h3 id="accuracyCounter" class="text-5xl font-bold text-blue-400">0</h3>
 <p class="text-gray-400">Accuracy Rate (%)</p>
 </div>
 </div>
@@ -61,51 +66,67 @@ Professional Data Entry & Administrator specialized in Excel Automation, Data Pr
 <!-- ABOUT -->
 <section id="about" class="py-24 max-w-4xl mx-auto px-6 text-center">
 <h2 class="text-3xl font-bold mb-6">About Me</h2>
-<p class="text-gray-400 leading-relaxed">
-I specialize in processing and managing large datasets efficiently. Using advanced Excel techniques and VBA automation, I build systems that transform manual work into fast automated workflows. I am highly detail-oriented and experienced in handling thousands of records with high accuracy.
+<p class="text-gray-400 leading-relaxed text-lg">
+I specialize in large-scale data processing and automation. My expertise includes Excel VBA macro systems, advanced data structuring, and building automated workflows that reduce manual work and improve productivity. I focus on accuracy, efficiency, and scalable data solutions.
 </p>
 </section>
 
 <!-- SKILLS -->
-<section id="skills" class="py-20 bg-gray-950">
-<h2 class="text-3xl font-bold text-center mb-12">Skills</h2>
-<div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto px-6">
-<div class="bg-gray-900 p-6 rounded-2xl hover:scale-105 transition">
-<h3 class="text-xl font-semibold mb-2">Data Entry</h3>
-<p class="text-gray-400">High speed and accurate data input for thousands of records.</p>
+<section id="skills" class="py-24 bg-gray-950">
+<h2 class="text-3xl font-bold text-center mb-16">Technical Skills</h2>
+
+<div class="max-w-4xl mx-auto space-y-8 px-6">
+
+<div>
+<p class="mb-2">Microsoft Excel</p>
+<div class="skillbar"><div class="skillfill" style="width:95%"></div></div>
 </div>
 
-<div class="bg-gray-900 p-6 rounded-2xl hover:scale-105 transition">
-<h3 class="text-xl font-semibold mb-2">Excel Automation</h3>
-<p class="text-gray-400">Building automated systems using Excel VBA Macro.</p>
+<div>
+<p class="mb-2">Excel VBA Automation</p>
+<div class="skillbar"><div class="skillfill" style="width:90%"></div></div>
 </div>
 
-<div class="bg-gray-900 p-6 rounded-2xl hover:scale-105 transition">
-<h3 class="text-xl font-semibold mb-2">Data Management</h3>
-<p class="text-gray-400">Cleaning, validating, and structuring large datasets.</p>
+<div>
+<p class="mb-2">Data Entry & Processing</p>
+<div class="skillbar"><div class="skillfill" style="width:98%"></div></div>
 </div>
+
+<div>
+<p class="mb-2">Google Sheets</p>
+<div class="skillbar"><div class="skillfill" style="width:85%"></div></div>
+</div>
+
 </div>
 </section>
 
 <!-- PROJECTS -->
 <section id="projects" class="py-24 max-w-6xl mx-auto px-6">
-<h2 class="text-3xl font-bold text-center mb-16">Project Gallery</h2>
+<h2 class="text-3xl font-bold text-center mb-16">Project Showcase</h2>
 
-<div class="grid md:grid-cols-2 gap-10">
+<div class="grid md:grid-cols-3 gap-10">
 
-<div class="bg-gray-900 rounded-2xl overflow-hidden hover:scale-105 transition">
+<div class="bg-gray-900 rounded-2xl overflow-hidden transition card">
 <img src="project1.jpg" class="w-full" />
 <div class="p-6">
-<h3 class="text-xl font-semibold mb-2">Excel Automation System</h3>
-<p class="text-gray-400">Automated Excel workflow capable of processing thousands of rows instantly.</p>
+<h3 class="text-xl font-semibold mb-2">Excel Automation Dashboard</h3>
+<p class="text-gray-400">Automated system that processes thousands of rows and generates reports instantly.</p>
 </div>
 </div>
 
-<div class="bg-gray-900 rounded-2xl overflow-hidden hover:scale-105 transition">
+<div class="bg-gray-900 rounded-2xl overflow-hidden transition card">
 <img src="project2.jpg" class="w-full" />
 <div class="p-6">
-<h3 class="text-xl font-semibold mb-2">Customer Database</h3>
-<p class="text-gray-400">Structured database system with automatic search and reporting.</p>
+<h3 class="text-xl font-semibold mb-2">Customer Data System</h3>
+<p class="text-gray-400">Structured Excel database with automated search, filtering, and reporting.</p>
+</div>
+</div>
+
+<div class="bg-gray-900 rounded-2xl overflow-hidden transition card">
+<img src="project3.jpg" class="w-full" />
+<div class="p-6">
+<h3 class="text-xl font-semibold mb-2">Macro Automation Tool</h3>
+<p class="text-gray-400">VBA macro designed to reduce repetitive tasks and increase workflow speed.</p>
 </div>
 </div>
 
@@ -115,35 +136,35 @@ I specialize in processing and managing large datasets efficiently. Using advanc
 <!-- CONTACT -->
 <section id="contact" class="py-24 bg-gray-950 text-center">
 <h2 class="text-3xl font-bold mb-6">Let's Work Together</h2>
-<p class="text-gray-400 mb-8">Open for remote opportunities and freelance projects.</p>
+<p class="text-gray-400 mb-10">Open for remote work, freelance projects, and data automation consulting.</p>
 
-<div class="space-y-2">
+<div class="space-y-3 text-lg">
 <p>Email: your@email.com</p>
 <p>LinkedIn: linkedin.com/in/yourname</p>
 <p>Upwork: upwork.com/freelancers/yourname</p>
 </div>
 </section>
 
-<footer class="text-center py-6 text-gray-600">© 2026 Syafiin Portfolio</footer>
+<footer class="text-center py-8 text-gray-600">© 2026 Syafiin Portfolio</footer>
 
 <script>
 function counter(id,target){
 let count=0
-let step=target/100
+let step=target/120
 let interval=setInterval(()=>{
 count+=step
 if(count>=target){count=target;clearInterval(interval)}
 document.getElementById(id).innerText=Math.floor(count).toLocaleString()
-},20)
+},15)
 }
 
 window.onload=()=>{
-counter('dataCount',10000)
-counter('automationCount',15)
-counter('accuracy',99)
+counter('dataCounter',15000)
+counter('automationCounter',20)
+counter('accuracyCounter',99)
 }
 
-ScrollReveal().reveal('section',{distance:'40px',duration:1000,origin:'bottom',interval:200});
+ScrollReveal().reveal('section',{distance:'50px',duration:1200,origin:'bottom',interval:200});
 </script>
 
 </body>
