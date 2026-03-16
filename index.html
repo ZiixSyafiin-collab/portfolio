@@ -3,36 +3,83 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Syafiin | Data Automation Engineer</title>
+<title>Mohammad Fauzi Hasbulloh | Data Automation Engineer</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://unpkg.com/scrollreveal"></script>
 <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-body{font-family:Inter, sans-serif;background:#030303}
-#particles-js{position:fixed;width:100%;height:100%;z-index:-1}
-.gradient{background:linear-gradient(135deg,#3b82f6,#06b6d4,#8b5cf6)}
-.glow{box-shadow:0 0 40px rgba(59,130,246,.7)}
-.card:hover{transform:translateY(-10px) scale(1.03)}
-.skillbar{height:10px;background:#1f2937;border-radius:20px;overflow:hidden}
-.skillfill{height:100%;background:linear-gradient(90deg,#3b82f6,#22d3ee)}
+body{font-family:Inter, sans-serif;background:#020617}
+
+/* particle background layer */
+#particles-js{
+position:fixed;
+width:100%;
+height:100%;
+z-index:-2
+}
+
+/* gradient overlay so particles don't disturb text */
+body::after{
+content:"";
+position:fixed;
+inset:0;
+background:radial-gradient(circle at 20% 20%,rgba(59,130,246,.15),transparent 40%),
+radial-gradient(circle at 80% 80%,rgba(99,102,241,.12),transparent 40%),
+#020617;
+z-index:-1
+}
+
+.gradient{
+background:linear-gradient(135deg,#60a5fa,#22d3ee,#a78bfa);
+}
+
+.glow{
+box-shadow:0 0 35px rgba(59,130,246,.45)
+}
+
+.card{
+transition:all .35s ease
+}
+
+.card:hover{
+transform:translateY(-10px) scale(1.03);
+box-shadow:0 25px 50px rgba(0,0,0,.6)
+}
+
+.skillbar{
+height:10px;
+background:#1e293b;
+border-radius:20px;
+overflow:hidden
+}
+
+.skillfill{
+height:100%;
+background:linear-gradient(90deg,#3b82f6,#22d3ee,#6366f1)
+}
+
+.section-glow{
+background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent)
+}
+
 </style>
 </head>
 
-<body class="text-white">
+<body class="text-slate-200">
 
 <div id="particles-js"></div>
 
 <!-- NAVBAR -->
-<header class="fixed w-full bg-black/50 backdrop-blur z-50">
+<header class="fixed w-full bg-slate-950/60 backdrop-blur border-b border-slate-800 z-50">
 <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
-<h1 class="text-xl font-bold tracking-wide">Syafiin.dev</h1>
+<h1 class="text-xl font-semibold tracking-wide">Syafiin.dev</h1>
 <nav class="space-x-6 text-sm">
-<a href="#about" class="hover:text-blue-400">About</a>
-<a href="#skills" class="hover:text-blue-400">Skills</a>
-<a href="#projects" class="hover:text-blue-400">Projects</a>
-<a href="#contact" class="hover:text-blue-400">Contact</a>
+<a href="#about" class="hover:text-sky-400">About</a>
+<a href="#skills" class="hover:text-sky-400">Skills</a>
+<a href="#projects" class="hover:text-sky-400">Projects</a>
+<a href="#contact" class="hover:text-sky-400">Contact</a>
 </nav>
 </div>
 </header>
@@ -44,36 +91,36 @@ body{font-family:Inter, sans-serif;background:#030303}
 Data Automation Engineer
 </h1>
 
-<p class="text-gray-400 max-w-2xl mb-8 text-lg">
-Specialized in Excel VBA automation, large-scale data processing, and building efficient workflows that transform manual data tasks into automated systems.
+<p class="text-slate-400 max-w-2xl mb-10 text-lg">
+I design automation systems using Excel VBA and advanced data processing techniques to transform manual workflows into scalable automated solutions.
 </p>
 
 <div class="flex gap-4">
-<a href="#projects" class="px-6 py-3 bg-blue-500 rounded-xl glow">View Projects</a>
-<a href="cv.pdf" class="px-6 py-3 border rounded-xl">Download CV</a>
+<a href="#projects" class="px-6 py-3 bg-sky-500 hover:bg-sky-400 rounded-xl glow transition">View Projects</a>
+<a href="cv.pdf" class="px-6 py-3 border border-slate-700 hover:border-slate-500 rounded-xl transition">Download CV</a>
 </div>
 
 </section>
 
 <!-- STATS -->
-<section class="py-24">
+<section class="py-24 section-glow">
 <h2 class="text-3xl font-bold text-center mb-16">Professional Impact</h2>
 
 <div class="grid md:grid-cols-3 gap-14 max-w-5xl mx-auto text-center">
 
 <div>
-<h3 id="dataCounter" class="text-5xl font-bold text-blue-400">0</h3>
-<p class="text-gray-400">Rows of Data Processed</p>
+<h3 id="dataCounter" class="text-5xl font-bold text-sky-400">0</h3>
+<p class="text-slate-400">Rows of Data Processed</p>
 </div>
 
 <div>
-<h3 id="automationCounter" class="text-5xl font-bold text-blue-400">0</h3>
-<p class="text-gray-400">Automation Systems Built</p>
+<h3 id="automationCounter" class="text-5xl font-bold text-indigo-400">0</h3>
+<p class="text-slate-400">Automation Systems Built</p>
 </div>
 
 <div>
-<h3 id="accuracyCounter" class="text-5xl font-bold text-blue-400">0</h3>
-<p class="text-gray-400">Accuracy Rate (%)</p>
+<h3 id="accuracyCounter" class="text-5xl font-bold text-violet-400">0</h3>
+<p class="text-slate-400">Accuracy Rate (%)</p>
 </div>
 
 </div>
@@ -83,14 +130,14 @@ Specialized in Excel VBA automation, large-scale data processing, and building e
 <section id="about" class="py-24 max-w-4xl mx-auto px-6 text-center">
 <h2 class="text-3xl font-bold mb-6">About Me</h2>
 
-<p class="text-gray-400 leading-relaxed text-lg">
-I design and build automated data workflows using Excel VBA and advanced data structuring techniques. My work focuses on efficiency, accuracy, and scalability when handling thousands of records. I specialize in transforming manual processes into fast automated systems.
+<p class="text-slate-400 leading-relaxed text-lg">
+I specialize in building automation tools for data-heavy workflows. My experience includes Excel VBA systems, structured data management, and automated reporting pipelines capable of processing thousands of records efficiently.
 </p>
 
 </section>
 
 <!-- SKILLS -->
-<section id="skills" class="py-24">
+<section id="skills" class="py-24 section-glow">
 <h2 class="text-3xl font-bold text-center mb-16">Technical Skills</h2>
 
 <div class="max-w-4xl mx-auto space-y-8 px-6">
@@ -125,27 +172,27 @@ I design and build automated data workflows using Excel VBA and advanced data st
 
 <div class="grid md:grid-cols-3 gap-10">
 
-<div class="bg-gray-900 rounded-2xl overflow-hidden transition card">
+<div class="bg-slate-900 rounded-2xl overflow-hidden card">
 <img src="project1.jpg" class="w-full" />
 <div class="p-6">
 <h3 class="text-xl font-semibold mb-2">Excel Automation Dashboard</h3>
-<p class="text-gray-400">System that processes thousands of rows and generates reports automatically.</p>
+<p class="text-slate-400">Automated workflow capable of cleaning, sorting, and reporting large datasets instantly.</p>
 </div>
 </div>
 
-<div class="bg-gray-900 rounded-2xl overflow-hidden transition card">
+<div class="bg-slate-900 rounded-2xl overflow-hidden card">
 <img src="project2.jpg" class="w-full" />
 <div class="p-6">
-<h3 class="text-xl font-semibold mb-2">Customer Database System</h3>
-<p class="text-gray-400">Structured dataset with automated search, filtering, and reporting tools.</p>
+<h3 class="text-xl font-semibold mb-2">Customer Data System</h3>
+<p class="text-slate-400">Structured Excel database with automated search, filtering, and reporting.</p>
 </div>
 </div>
 
-<div class="bg-gray-900 rounded-2xl overflow-hidden transition card">
+<div class="bg-slate-900 rounded-2xl overflow-hidden card">
 <img src="project3.jpg" class="w-full" />
 <div class="p-6">
 <h3 class="text-xl font-semibold mb-2">Macro Automation Tool</h3>
-<p class="text-gray-400">VBA macro tool designed to eliminate repetitive tasks.</p>
+<p class="text-slate-400">VBA macro system that eliminates repetitive tasks and speeds up workflows.</p>
 </div>
 </div>
 
@@ -154,10 +201,10 @@ I design and build automated data workflows using Excel VBA and advanced data st
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="py-24 text-center">
+<section id="contact" class="py-24 text-center section-glow">
 
 <h2 class="text-3xl font-bold mb-6">Let's Work Together</h2>
-<p class="text-gray-400 mb-10">Open for remote work, freelance projects, and automation consulting.</p>
+<p class="text-slate-400 mb-10">Open for remote opportunities and automation projects.</p>
 
 <div class="space-y-3 text-lg">
 <p>Email: your@email.com</p>
@@ -167,7 +214,7 @@ I design and build automated data workflows using Excel VBA and advanced data st
 
 </section>
 
-<footer class="text-center py-8 text-gray-600">© 2026 Syafiin Portfolio</footer>
+<footer class="text-center py-8 text-slate-500">© 2026 Syafiin Portfolio</footer>
 
 <script>
 
@@ -189,10 +236,13 @@ counter('accuracyCounter',99)
 
 particlesJS("particles-js",{
 particles:{
-number:{value:80},
+number:{value:55},
+color:{value:"#3b82f6"},
+shape:{type:"circle"},
+opacity:{value:0.25},
 size:{value:3},
-move:{speed:1},
-line_linked:{enable:true}
+line_linked:{enable:true,color:"#3b82f6",opacity:0.15},
+move:{speed:0.7}
 }
 })
 
