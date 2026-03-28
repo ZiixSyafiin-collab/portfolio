@@ -16,18 +16,10 @@ body{font-family:Inter,sans-serif;background:#020617;color:#e2e8f0}
 .log{height:120px;overflow:auto;font-size:12px;background:#020617;padding:10px;border-radius:10px}
 input{color:black}
 
-/* FIX DEMO */
-#demoResult{color:black !important;}
-#demoInput{color:black;background:white;}
-
-/* FIX ERP */
-#name, #amount, #cost{
-  color:black;
-  background:white;
-}
-
-#erpTable, #erpTable td, #erpTable th{
-  color:white;
+/* UPGRADE DEMO */
+#demoBox{
+border:1px solid #1e293b;
+box-shadow:0 0 20px rgba(56,189,248,0.1);
 }
 </style>
 
@@ -58,9 +50,22 @@ and creating efficient workflows that scale.
 <h2 class="text-3xl font-bold text-center mb-12">Skills</h2>
 
 <div class="grid md:grid-cols-3 gap-6 text-center">
-<div class="card"><h3 class="font-semibold mb-2">Python</h3><p class="text-slate-400 text-sm">Automation & data processing</p></div>
-<div class="card"><h3 class="font-semibold mb-2">SQL</h3><p class="text-slate-400 text-sm">Data analysis & querying</p></div>
-<div class="card"><h3 class="font-semibold mb-2">Excel VBA</h3><p class="text-slate-400 text-sm">Automation systems</p></div>
+
+<div class="card">
+<h3 class="font-semibold mb-2">Python</h3>
+<p class="text-slate-400 text-sm">Automation & data processing</p>
+</div>
+
+<div class="card">
+<h3 class="font-semibold mb-2">SQL</h3>
+<p class="text-slate-400 text-sm">Data analysis & querying</p>
+</div>
+
+<div class="card">
+<h3 class="font-semibold mb-2">Excel VBA</h3>
+<p class="text-slate-400 text-sm">Automation systems</p>
+</div>
+
 </div>
 </section>
 
@@ -69,21 +74,102 @@ and creating efficient workflows that scale.
 <h2 class="text-3xl font-bold text-center mb-12">Projects</h2>
 
 <div class="grid md:grid-cols-3 gap-6">
-<div class="card"><h3 class="font-semibold mb-2">Sales Automation</h3><p class="text-slate-400 text-sm">Automated reporting using Python reducing manual work.</p></div>
-<div class="card"><h3 class="font-semibold mb-2">SQL Analysis</h3><p class="text-slate-400 text-sm">Data insights extraction from large datasets.</p></div>
-<div class="card"><h3 class="font-semibold mb-2">VBA Dashboard</h3><p class="text-slate-400 text-sm">Financial automation dashboard system.</p></div>
+
+<div class="card">
+<h3 class="font-semibold mb-2">Sales Automation</h3>
+<p class="text-slate-400 text-sm">
+Automated reporting using Python reducing manual work.
+</p>
+</div>
+
+<div class="card">
+<h3 class="font-semibold mb-2">SQL Analysis</h3>
+<p class="text-slate-400 text-sm">
+Data insights extraction from large datasets.
+</p>
+</div>
+
+<div class="card">
+<h3 class="font-semibold mb-2">VBA Dashboard</h3>
+<p class="text-slate-400 text-sm">
+Financial automation dashboard system.
+</p>
+</div>
+
 </div>
 </section>
 
-<!-- DEMO -->
+<!-- BEFORE AFTER -->
+<section class="py-20 max-w-5xl mx-auto px-6">
+<h2 class="text-3xl font-bold text-center mb-12">Before vs After</h2>
+
+<div class="grid md:grid-cols-2 gap-8">
+
+<div class="card border border-red-700">
+<h3 class="text-red-400 mb-3">Before</h3>
+<ul class="text-sm space-y-2">
+<li>Manual work</li>
+<li>High error</li>
+<li>Slow processing</li>
+</ul>
+</div>
+
+<div class="card border border-green-700">
+<h3 class="text-green-400 mb-3">After</h3>
+<ul class="text-sm space-y-2">
+<li>Automated system</li>
+<li>High accuracy</li>
+<li>Fast processing</li>
+</ul>
+</div>
+
+</div>
+</section>
+
+<!-- DEMO (UPGRADE) -->
 <section class="py-20 text-center max-w-xl mx-auto">
 <h2 class="text-3xl font-bold mb-6">Live Automation Demo</h2>
 
-<div class="card">
-<input id="demoInput" type="number" placeholder="Enter value" class="w-full p-3 mb-4 rounded">
-<button onclick="runDemo()" class="bg-sky-500 px-6 py-2 rounded">Run</button>
-<p id="demoResult" class="mt-4"></p>
+<div class="card text-left">
+
+<input id="demoInput" type="number" placeholder="Enter value" class="w-full p-3 mb-4 rounded text-black">
+
+<button onclick="runDemo()" class="bg-sky-500 px-6 py-2 rounded w-full hover:bg-sky-600 transition">
+Run Automation
+</button>
+
+<div id="demoBox" class="mt-6 p-4 rounded bg-slate-900 hidden">
+<p class="text-slate-400 text-sm mb-1">Automation Result</p>
+<p id="demoResult" class="text-white text-xl font-semibold"></p>
 </div>
+
+</div>
+</section>
+
+<!-- ENTERPRISE DASHBOARD -->
+<section class="py-20 max-w-6xl mx-auto px-6">
+<h2 class="text-3xl font-bold text-center mb-8">Enterprise Dashboard</h2>
+
+<div class="card mb-4">
+<input type="file" id="csvFile">
+<button onclick="processCSV()" class="bg-sky-500 px-4 py-2 rounded ml-2">Process</button>
+</div>
+
+<div class="grid md:grid-cols-4 gap-4 mb-4 text-center">
+<div class="card"><h3 id="t1">0</h3><p>Total</p></div>
+<div class="card"><h3 id="t2">0</h3><p>Valid</p></div>
+<div class="card"><h3 id="t3">0</h3><p>Error</p></div>
+<div class="card"><h3 id="t4">0</h3><p>Average</p></div>
+</div>
+
+<div class="card mb-4"><canvas id="chart"></canvas></div>
+
+<div class="card mb-4 overflow-auto">
+<table id="table" class="w-full text-sm"></table>
+</div>
+
+<div class="card"><div id="log" class="log"></div></div>
+
 </section>
 
 <!-- ERP -->
@@ -91,89 +177,125 @@ and creating efficient workflows that scale.
 <h2 class="text-3xl font-bold text-center mb-8">Mini ERP System</h2>
 
 <div class="card mb-4">
-<input id="name" placeholder="Product Name" class="p-2 mr-2">
-<input id="amount" type="number" placeholder="Revenue" class="p-2 mr-2">
-<input id="cost" type="number" placeholder="Cost" class="p-2 mr-2">
-
+<input id="name" placeholder="Name" class="p-2 mr-2 text-black">
+<input id="amount" type="number" placeholder="Amount" class="p-2 mr-2 text-black">
 <button onclick="addData()" class="bg-green-500 px-4 py-2 rounded">Add</button>
 <button onclick="exportCSV()" class="bg-indigo-500 px-4 py-2 rounded ml-2">Export</button>
 </div>
 
-<div class="card overflow-auto mb-4">
+<div class="card overflow-auto">
 <table id="erpTable" class="w-full text-sm">
-<tr>
-<th>Name</th>
-<th>Revenue</th>
-<th>Cost</th>
-<th>Profit</th>
-</tr>
+<tr><th>Name</th><th>Amount</th></tr>
 </table>
-</div>
-
-<div class="card">
-<p>Total Revenue: <span id="totalRevenue">0</span></p>
-<p>Total Cost: <span id="totalCost">0</span></p>
-<p>Total Profit: <span id="totalProfit">0</span></p>
 </div>
 
 </section>
 
+<!-- CONTACT -->
+<section class="py-20 text-center">
+<h2 class="text-3xl font-bold mb-4">Contact</h2>
+<p>Email: mohfauzi12@gmail.com</p>
+</section>
+
 <script>
 
-// DEMO
+// DEMO UPGRADE
 function runDemo(){
-let val=document.getElementById("demoInput").value;
-document.getElementById("demoResult").innerText="Result: "+(val*1.1);
+let val = document.getElementById("demoInput").value;
+let box = document.getElementById("demoBox");
+let result = document.getElementById("demoResult");
+
+if(!val){
+alert("Please enter value");
+return;
+}
+
+box.classList.remove("hidden");
+result.innerText = "Processing...";
+
+setTimeout(()=>{
+let output = (val * 1.1).toFixed(2);
+output = Number(output).toLocaleString();
+result.innerText = "Rp " + output;
+},800);
+}
+
+// CSV
+let chart;
+
+function processCSV(){
+let file=document.getElementById("csvFile").files[0];
+if(!file){alert("Upload CSV");return;}
+
+let reader=new FileReader();
+
+reader.onload=function(e){
+
+let rows=e.target.result.split("\n");
+let valid=[],error=0;
+
+rows.forEach(r=>{
+let n=parseFloat(r);
+if(isNaN(n)){error++}else{valid.push(n)}
+});
+
+let total=valid.reduce((a,b)=>a+b,0);
+let avg=total/(valid.length||1);
+
+t1.innerText=rows.length;
+t2.innerText=valid.length;
+t3.innerText=error;
+t4.innerText=avg.toFixed(2);
+
+renderTable(valid);
+renderChart(valid);
+
+};
+
+reader.readAsText(file);
+}
+
+function renderTable(data){
+let t=document.getElementById("table");
+t.innerHTML="<tr><th>No</th><th>Value</th></tr>";
+data.slice(0,20).forEach((v,i)=>{
+t.innerHTML+=`<tr><td>${i+1}</td><td>${v}</td></tr>`;
+});
+}
+
+function renderChart(data){
+let ctx=document.getElementById("chart");
+if(chart){chart.destroy();}
+chart=new Chart(ctx,{
+type:"line",
+data:{labels:data.map((_,i)=>i+1),
+datasets:[{label:"Data",data:data}]}
+});
 }
 
 // ERP
 let erpData=[];
-let totalRevenue=0;
-let totalCost=0;
 
 function addData(){
 let name=document.getElementById("name").value;
-let amount=parseFloat(document.getElementById("amount").value)||0;
-let cost=parseFloat(document.getElementById("cost").value)||0;
-
-erpData.push({name,amount,cost});
+let amount=document.getElementById("amount").value;
+erpData.push({name,amount});
 renderERP();
 }
 
 function renderERP(){
 let t=document.getElementById("erpTable");
-t.innerHTML="<tr><th>Name</th><th>Revenue</th><th>Cost</th><th>Profit</th></tr>";
-
-totalRevenue=0;
-totalCost=0;
-
+t.innerHTML="<tr><th>Name</th><th>Amount</th></tr>";
 erpData.forEach(d=>{
-let profit=d.amount-d.cost;
-
-totalRevenue+=d.amount;
-totalCost+=d.cost;
-
-t.innerHTML+=`<tr>
-<td>${d.name}</td>
-<td>${d.amount}</td>
-<td>${d.cost}</td>
-<td>${profit}</td>
-</tr>`;
+t.innerHTML+=`<tr><td>${d.name}</td><td>${d.amount}</td></tr>`;
 });
-
-document.getElementById("totalRevenue").innerText=totalRevenue;
-document.getElementById("totalCost").innerText=totalCost;
-document.getElementById("totalProfit").innerText=totalRevenue-totalCost;
 }
 
 function exportCSV(){
-let csv="Name,Revenue,Cost,Profit\n";
-
+let csv="Name,Amount\n";
 erpData.forEach(d=>{
-let profit=d.amount-d.cost;
-csv+=`${d.name},${d.amount},${d.cost},${profit}\n`;
+csv+=`${d.name},${d.amount}\n`;
 });
-
 let blob=new Blob([csv]);
 let a=document.createElement("a");
 a.href=URL.createObjectURL(blob);
