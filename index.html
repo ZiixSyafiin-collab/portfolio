@@ -6,23 +6,19 @@
 <title>Fauzi | Data & Automation Portfolio</title>
 
 <script src="https://cdn.tailwindcss.com"></script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 body{font-family:Inter,sans-serif;background:#020617;color:#e2e8f0}
 .card{background:#0f172a;padding:20px;border-radius:16px}
-.log{height:120px;overflow:auto;font-size:12px;background:#020617;padding:10px;border-radius:10px}
-input{color:black}
+input,select{color:black}
 
-/* UPGRADE DEMO */
 #demoBox{
 border:1px solid #1e293b;
 box-shadow:0 0 20px rgba(56,189,248,0.1);
 }
 </style>
-
 </head>
 
 <body class="space-y-24">
@@ -48,93 +44,49 @@ and creating efficient workflows that scale.
 <!-- SKILLS -->
 <section class="py-20 max-w-5xl mx-auto px-6">
 <h2 class="text-3xl font-bold text-center mb-12">Skills</h2>
-
 <div class="grid md:grid-cols-3 gap-6 text-center">
-
-<div class="card">
-<h3 class="font-semibold mb-2">Python</h3>
-<p class="text-slate-400 text-sm">Automation & data processing</p>
-</div>
-
-<div class="card">
-<h3 class="font-semibold mb-2">SQL</h3>
-<p class="text-slate-400 text-sm">Data analysis & querying</p>
-</div>
-
-<div class="card">
-<h3 class="font-semibold mb-2">Excel VBA</h3>
-<p class="text-slate-400 text-sm">Automation systems</p>
-</div>
-
+<div class="card"><h3>Python</h3><p class="text-slate-400 text-sm">Automation & data processing</p></div>
+<div class="card"><h3>SQL</h3><p class="text-slate-400 text-sm">Data analysis & querying</p></div>
+<div class="card"><h3>Excel VBA</h3><p class="text-slate-400 text-sm">Automation systems</p></div>
 </div>
 </section>
 
 <!-- PROJECTS -->
 <section class="py-20 max-w-5xl mx-auto px-6">
 <h2 class="text-3xl font-bold text-center mb-12">Projects</h2>
-
 <div class="grid md:grid-cols-3 gap-6">
-
-<div class="card">
-<h3 class="font-semibold mb-2">Sales Automation</h3>
-<p class="text-slate-400 text-sm">
-Automated reporting using Python reducing manual work.
-</p>
-</div>
-
-<div class="card">
-<h3 class="font-semibold mb-2">SQL Analysis</h3>
-<p class="text-slate-400 text-sm">
-Data insights extraction from large datasets.
-</p>
-</div>
-
-<div class="card">
-<h3 class="font-semibold mb-2">VBA Dashboard</h3>
-<p class="text-slate-400 text-sm">
-Financial automation dashboard system.
-</p>
-</div>
-
+<div class="card"><h3>Sales Automation</h3><p class="text-slate-400 text-sm">Automated reporting using Python</p></div>
+<div class="card"><h3>SQL Analysis</h3><p class="text-slate-400 text-sm">Data insights from datasets</p></div>
+<div class="card"><h3>VBA Dashboard</h3><p class="text-slate-400 text-sm">Financial automation dashboard</p></div>
 </div>
 </section>
 
 <!-- BEFORE AFTER -->
 <section class="py-20 max-w-5xl mx-auto px-6">
 <h2 class="text-3xl font-bold text-center mb-12">Before vs After</h2>
-
 <div class="grid md:grid-cols-2 gap-8">
-
 <div class="card border border-red-700">
-<h3 class="text-red-400 mb-3">Before</h3>
-<ul class="text-sm space-y-2">
-<li>Manual work</li>
-<li>High error</li>
-<li>Slow processing</li>
-</ul>
+<h3 class="text-red-400">Before</h3>
+<ul class="text-sm"><li>Manual</li><li>Error</li><li>Slow</li></ul>
 </div>
-
 <div class="card border border-green-700">
-<h3 class="text-green-400 mb-3">After</h3>
-<ul class="text-sm space-y-2">
-<li>Automated system</li>
-<li>High accuracy</li>
-<li>Fast processing</li>
-</ul>
+<h3 class="text-green-400">After</h3>
+<ul class="text-sm"><li>Automated</li><li>Accurate</li><li>Fast</li></ul>
 </div>
-
 </div>
 </section>
 
-<!-- DEMO (UPGRADE) -->
+<!-- DEMO -->
 <section class="py-20 text-center max-w-xl mx-auto">
-<h2 class="text-3xl font-bold mb-6">Live Automation Demo</h2>
+<h2 class="text-3xl font-bold mb-6">Financial Automation Demo</h2>
+<p class="text-slate-400 text-sm">
+Simple financial simulation to demonstrate automated calculations such as fee, tax, and profit adjustments.
+</p>
 
 <div class="card text-left">
-
 <input id="demoInput" type="number" placeholder="Enter value" class="w-full p-3 mb-4 rounded text-black">
 
-<button onclick="runDemo()" class="bg-sky-500 px-6 py-2 rounded w-full hover:bg-sky-600 transition">
+<button onclick="runDemo()" class="bg-sky-500 px-6 py-2 rounded w-full">
 Run Automation
 </button>
 
@@ -142,51 +94,42 @@ Run Automation
 <p class="text-slate-400 text-sm mb-1">Automation Result</p>
 <p id="demoResult" class="text-white text-xl font-semibold"></p>
 </div>
-
 </div>
 </section>
 
-<!-- ENTERPRISE DASHBOARD -->
-<section class="py-20 max-w-6xl mx-auto px-6">
-<h2 class="text-3xl font-bold text-center mb-8">Enterprise Dashboard</h2>
-
-<div class="card mb-4">
-<input type="file" id="csvFile">
-<button onclick="processCSV()" class="bg-sky-500 px-4 py-2 rounded ml-2">Process</button>
-</div>
-
-<div class="grid md:grid-cols-4 gap-4 mb-4 text-center">
-<div class="card"><h3 id="t1">0</h3><p>Total</p></div>
-<div class="card"><h3 id="t2">0</h3><p>Valid</p></div>
-<div class="card"><h3 id="t3">0</h3><p>Error</p></div>
-<div class="card"><h3 id="t4">0</h3><p>Average</p></div>
-</div>
-
-<div class="card mb-4"><canvas id="chart"></canvas></div>
-
-<div class="card mb-4 overflow-auto">
-<table id="table" class="w-full text-sm"></table>
-</div>
-
-<div class="card"><div id="log" class="log"></div></div>
-
-</section>
-
-<!-- ERP -->
+<!-- MINI ERP -->
 <section class="py-20 max-w-5xl mx-auto px-6">
-<h2 class="text-3xl font-bold text-center mb-8">Mini ERP System</h2>
+<h2 class="text-3xl font-bold text-center mb-8">Mini ERP Finance System</h2>
 
-<div class="card mb-4">
-<input id="name" placeholder="Name" class="p-2 mr-2 text-black">
-<input id="amount" type="number" placeholder="Amount" class="p-2 mr-2 text-black">
+<div class="card mb-4 grid md:grid-cols-5 gap-2">
+<input id="date" type="date" class="text-black p-2">
+<input id="name" placeholder="Description" class="text-black p-2">
+<input id="amount" type="number" placeholder="Amount" class="text-black p-2">
+<select id="type" class="text-black p-2">
+<option value="income">Income</option>
+<option value="expense">Expense</option>
+</select>
 <button onclick="addData()" class="bg-green-500 px-4 py-2 rounded">Add</button>
-<button onclick="exportCSV()" class="bg-indigo-500 px-4 py-2 rounded ml-2">Export</button>
+</div>
+
+<div class="grid md:grid-cols-3 gap-4 mb-4 text-center">
+<div class="card"><p>Total Income</p><h3 id="income" class="text-green-400">Rp 0</h3></div>
+<div class="card"><p>Total Expense</p><h3 id="expense" class="text-red-400">Rp 0</h3></div>
+<div class="card"><p>Balance</p><h3 id="balance">Rp 0</h3></div>
 </div>
 
 <div class="card overflow-auto">
-<table id="erpTable" class="w-full text-sm">
-<tr><th>Name</th><th>Amount</th></tr>
-</table>
+<table id="erpTable" class="w-full text-sm"></table>
+</div>
+
+<div class="flex gap-2 mt-4">
+<button onclick="exportCSV()" class="bg-indigo-500 px-4 py-2 rounded">
+Export Report
+</button>
+
+<button onclick="clearData()" class="bg-red-500 hover:bg-red-600 transition px-4 py-2 rounded">
+Clear Data
+</button>
 </div>
 
 </section>
@@ -195,111 +138,112 @@ Run Automation
 <section class="py-20 text-center">
 <h2 class="text-3xl font-bold mb-4">Contact</h2>
 <p>Email: mohfauzi12@gmail.com</p>
+<p>whatsapp: 083169833751</p>
 </section>
 
 <script>
 
-// DEMO UPGRADE
+// DEMO
 function runDemo(){
-let val = document.getElementById("demoInput").value;
-let box = document.getElementById("demoBox");
-let result = document.getElementById("demoResult");
+let val=document.getElementById("demoInput").value;
+let box=document.getElementById("demoBox");
+let result=document.getElementById("demoResult");
 
-if(!val){
-alert("Please enter value");
+if(val === "" || isNaN(val)){
+alert("Please enter valid number");
 return;
 }
 
 box.classList.remove("hidden");
-result.innerText = "Processing...";
+result.innerText="Processing...";
 
 setTimeout(()=>{
-let output = (val * 1.1).toFixed(2);
-output = Number(output).toLocaleString();
-result.innerText = "Rp " + output;
+let output=(val*1.1).toFixed(2);
+result.innerText="Rp "+Number(output).toLocaleString("id-ID");
 },800);
-}
-
-// CSV
-let chart;
-
-function processCSV(){
-let file=document.getElementById("csvFile").files[0];
-if(!file){alert("Upload CSV");return;}
-
-let reader=new FileReader();
-
-reader.onload=function(e){
-
-let rows=e.target.result.split("\n");
-let valid=[],error=0;
-
-rows.forEach(r=>{
-let n=parseFloat(r);
-if(isNaN(n)){error++}else{valid.push(n)}
-});
-
-let total=valid.reduce((a,b)=>a+b,0);
-let avg=total/(valid.length||1);
-
-t1.innerText=rows.length;
-t2.innerText=valid.length;
-t3.innerText=error;
-t4.innerText=avg.toFixed(2);
-
-renderTable(valid);
-renderChart(valid);
-
-};
-
-reader.readAsText(file);
-}
-
-function renderTable(data){
-let t=document.getElementById("table");
-t.innerHTML="<tr><th>No</th><th>Value</th></tr>";
-data.slice(0,20).forEach((v,i)=>{
-t.innerHTML+=`<tr><td>${i+1}</td><td>${v}</td></tr>`;
-});
-}
-
-function renderChart(data){
-let ctx=document.getElementById("chart");
-if(chart){chart.destroy();}
-chart=new Chart(ctx,{
-type:"line",
-data:{labels:data.map((_,i)=>i+1),
-datasets:[{label:"Data",data:data}]}
-});
 }
 
 // ERP
 let erpData=[];
 
+function formatRupiah(num){
+return "Rp " + Number(num).toLocaleString("id-ID");
+}
+
 function addData(){
+let date=document.getElementById("date").value;
 let name=document.getElementById("name").value;
-let amount=document.getElementById("amount").value;
-erpData.push({name,amount});
+let amount=parseFloat(document.getElementById("amount").value);
+let type=document.getElementById("type").value;
+
+if(!date || !name || isNaN(amount)){
+alert("Lengkapi data!");
+return;
+}
+
+amount=Math.abs(amount);
+
+erpData.push({date,name,amount,type});
 renderERP();
+
+document.getElementById("name").value="";
+document.getElementById("amount").value="";
+document.getElementById("date").value="";
 }
 
 function renderERP(){
 let t=document.getElementById("erpTable");
-t.innerHTML="<tr><th>Name</th><th>Amount</th></tr>";
-erpData.forEach(d=>{
-t.innerHTML+=`<tr><td>${d.name}</td><td>${d.amount}</td></tr>`;
+
+t.innerHTML=`
+<tr>
+<th>Date</th><th>Description</th><th>Type</th><th>Amount</th><th>Action</th>
+</tr>`;
+
+let income=0,expense=0;
+
+erpData.forEach((d,i)=>{
+if(d.type==="income"){income+=d.amount}else{expense+=d.amount}
+
+t.innerHTML+=`
+<tr>
+<td>${d.date}</td>
+<td>${d.name}</td>
+<td class="${d.type==="income"?"text-green-400":"text-red-400"}">${d.type}</td>
+<td>${formatRupiah(d.amount)}</td>
+<td><button onclick="deleteData(${i})" class="text-red-400">Delete</button></td>
+</tr>`;
 });
+
+if(erpData.length===0){
+t.innerHTML+=`<tr><td colspan="5" class="text-center text-slate-400">No data</td></tr>`;
+}
+
+document.getElementById("income").innerText=formatRupiah(income);
+document.getElementById("expense").innerText=formatRupiah(expense);
+document.getElementById("balance").innerText=formatRupiah(income-expense);
+}
+
+function deleteData(i){
+erpData.splice(i,1);
+renderERP();
+}
+
+function clearData(){
+if(!confirm("Are you sure to delete this data ?")) return;
+erpData=[];
+renderERP();
 }
 
 function exportCSV(){
-let csv="Name,Amount\n";
+let csv="Date,Description,Type,Amount\n";
 erpData.forEach(d=>{
-csv+=`${d.name},${d.amount}\n`;
+csv+=`${d.date},${d.name},${d.type},${d.amount}\n`;
 });
+
 let blob=new Blob([csv]);
 let a=document.createElement("a");
 a.href=URL.createObjectURL(blob);
-a.download="erp_data.csv";
+a.download="finance_report.csv";
 a.click();
 }
 
