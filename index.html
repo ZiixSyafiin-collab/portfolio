@@ -8,22 +8,13 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://unpkg.com/scrollreveal"></script>
 <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-body{
-font-family:Inter,sans-serif;
-background:#020617
-}
-
-#particles-js{
-position:fixed;
-width:100%;
-height:100%;
-z-index:-2
-}
-
+body{font-family:Inter,sans-serif;background:#020617}
+#particles-js{position:fixed;width:100%;height:100%;z-index:-2}
 body::after{
 content:"";
 position:fixed;
@@ -34,37 +25,16 @@ radial-gradient(circle at 80% 80%,rgba(139,92,246,.15),transparent 40%),
 #020617;
 z-index:-1
 }
-
 .gradient{
 background:linear-gradient(135deg,#60a5fa,#22d3ee,#a78bfa);
 -webkit-background-clip:text;
 color:transparent
 }
-
-.card{
-transition:.35s
-}
-
-.card:hover{
-transform:translateY(-10px) scale(1.03);
-box-shadow:0 25px 50px rgba(0,0,0,.6)
-}
-
-.skillbar{
-height:10px;
-background:#1e293b;
-border-radius:20px;
-overflow:hidden
-}
-
-.skillfill{
-height:100%;
-background:linear-gradient(90deg,#3b82f6,#22d3ee,#6366f1)
-}
-
-.glow{
-box-shadow:0 0 35px rgba(59,130,246,.4)
-}
+.card{transition:.35s}
+.card:hover{transform:translateY(-10px) scale(1.03);box-shadow:0 25px 50px rgba(0,0,0,.6)}
+.skillbar{height:10px;background:#1e293b;border-radius:20px;overflow:hidden}
+.skillfill{height:100%;background:linear-gradient(90deg,#3b82f6,#22d3ee,#6366f1)}
+.glow{box-shadow:0 0 35px rgba(59,130,246,.4)}
 </style>
 </head>
 
@@ -79,7 +49,8 @@ box-shadow:0 0 35px rgba(59,130,246,.4)
 <a href="#about" class="hover:text-sky-400">About</a>
 <a href="#skills" class="hover:text-sky-400">Skills</a>
 <a href="#projects" class="hover:text-sky-400">Projects</a>
-<a href="#demo" class="hover:text-sky-400">Demo</a>
+<a href="#demo1" class="hover:text-sky-400">Automation</a>
+<a href="#demo2" class="hover:text-sky-400">Analytics</a>
 <a href="#contact" class="hover:text-sky-400">Contact</a>
 </nav>
 </div>
@@ -88,10 +59,10 @@ box-shadow:0 0 35px rgba(59,130,246,.4)
 <section class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-32">
 <img src="Zii_profil.jpg" style="width:170px;border-radius:50%;border:3px solid #3b82f6;margin-bottom:30px;">
 <h1 class="text-6xl md:text-7xl font-bold mb-6 gradient">
-Automation & Data Processing Specialist
+Automation & Data Specialist
 </h1>
 <p class="text-slate-400 max-w-2xl mb-10 text-lg">
-I build automation systems that transform messy data into structured insights efficiently.
+I build automation systems, data pipelines, and analytics dashboards to transform raw data into actionable insights.
 </p>
 <div class="flex gap-4">
 <a href="CV Mohammad Fauzi Hasbulloh.pdf" download class="px-6 py-3 bg-sky-500 hover:bg-sky-400 rounded-xl glow transition">
@@ -103,36 +74,46 @@ Contact
 </div>
 </section>
 
-<!-- DEMO SECTION -->
-<section id="demo" class="py-24 max-w-4xl mx-auto px-6">
+<!-- AUTOMATION DEMO -->
+<section id="demo1" class="py-24 max-w-4xl mx-auto px-6">
+<h2 class="text-3xl font-bold text-center mb-10">Automation Simulator</h2>
 
-<h2 class="text-3xl font-bold text-center mb-10">
-Automation Demo (Live Simulation)
-</h2>
+<div class="bg-slate-900 p-6 rounded-2xl">
+<textarea id="rawData" class="w-full h-40 p-3 rounded bg-slate-800 mb-4" placeholder="andi,25
+budi,30
+error"></textarea>
 
-<div class="bg-slate-900 p-6 rounded-2xl shadow-xl">
-
-<p class="text-slate-400 mb-4">
-Input messy data → auto clean → calculate → export (simulation of real automation work)
-</p>
-
-<textarea id="rawData" class="w-full h-40 p-3 rounded bg-slate-800 text-white mb-4" placeholder="andi, 25
-budi ,30
-caca, 22
-error data"></textarea>
-
-<div class="flex gap-3 flex-wrap mb-6">
-<button onclick="processData()" class="px-5 py-2 bg-sky-500 rounded-lg">Process</button>
-<button onclick="exportCSV()" class="px-5 py-2 bg-green-500 rounded-lg">Export CSV</button>
-<button onclick="clearData()" class="px-5 py-2 bg-red-500 rounded-lg">Clear</button>
+<div class="flex gap-3 mb-4">
+<button onclick="processData()" class="px-4 py-2 bg-sky-500 rounded">Process</button>
+<button onclick="exportCSV()" class="px-4 py-2 bg-green-500 rounded">Export</button>
+<button onclick="clearAutomation()" class="px-4 py-2 bg-red-500 rounded">Clear</button>
 </div>
 
-<div class="mb-4">
 <p id="summary" class="text-yellow-400"></p>
 <p id="errorLog" class="text-red-400 text-sm"></p>
-</div>
 
 <pre id="output" class="bg-slate-800 p-4 rounded text-green-400"></pre>
+</div>
+</section>
+
+<!-- ANALYTICS DASHBOARD -->
+<section id="demo2" class="py-24 max-w-5xl mx-auto px-6">
+<h2 class="text-3xl font-bold text-center mb-10">Data Analytics Dashboard</h2>
+
+<div class="bg-slate-900 p-6 rounded-2xl">
+
+<input type="file" id="fileInput" accept=".csv" class="mb-4">
+
+<div class="flex gap-3 mb-4">
+<button onclick="processCSV()" class="px-4 py-2 bg-sky-500 rounded">Analyze</button>
+<button onclick="clearAnalytics()" class="px-4 py-2 bg-red-500 rounded">Clear</button>
+</div>
+
+<p id="insight" class="text-yellow-400 mb-4"></p>
+
+<canvas id="chart"></canvas>
+
+<pre id="outputCSV" class="bg-slate-800 p-4 rounded text-green-400 mt-4"></pre>
 
 </div>
 </section>
@@ -143,94 +124,101 @@ error data"></textarea>
 
 <script>
 
+// AUTOMATION
 function processData(){
+let rows = document.getElementById("rawData").value.split("\n")
+let result=[], errors=[], total=0
 
-let input = document.getElementById("rawData").value
-let rows = input.split("\n")
-
-let result = []
-let errors = []
-let totalAge = 0
-
-rows.forEach((row,i)=>{
-let parts = row.split(",")
-
-if(parts.length < 2){
-errors.push(`Row ${i+1}: Invalid format`)
-return
-}
-
-let name = parts[0].trim()
-let age = parseInt(parts[1])
-
-if(!name || isNaN(age)){
-errors.push(`Row ${i+1}: Invalid data`)
-return
-}
-
-name = name.toUpperCase()
-totalAge += age
-
+rows.forEach((r,i)=>{
+let p=r.split(",")
+if(p.length<2){errors.push(`Row ${i+1} error`);return}
+let name=p[0].trim().toUpperCase()
+let age=parseInt(p[1])
+if(!name||isNaN(age)){errors.push(`Row ${i+1} invalid`);return}
+total+=age
 result.push({name,age})
 })
 
-let avg = result.length ? (totalAge/result.length).toFixed(1) : 0
+let avg=result.length?(total/result.length).toFixed(1):0
 
-document.getElementById("summary").innerText =
-`Total Data: ${result.length} | Average Age: ${avg}`
+document.getElementById("summary").innerText=`Total:${result.length} | Avg:${avg}`
+document.getElementById("errorLog").innerText=errors.join("\n")
+document.getElementById("output").innerText=result.map((r,i)=>`${i+1}. ${r.name} - ${r.age}`).join("\n")
 
-document.getElementById("errorLog").innerText =
-errors.length ? errors.join("\n") : ""
-
-document.getElementById("output").innerText =
-result.map((r,i)=>`${i+1}. ${r.name} - ${r.age}`).join("\n")
-
-window.cleanedData = result
+window.cleanedData=result
 }
 
 function exportCSV(){
-
-if(!window.cleanedData || window.cleanedData.length === 0){
-alert("No data to export")
-return
-}
-
-let csv = "Name,Age\n" + window.cleanedData.map(r=>`${r.name},${r.age}`).join("\n")
-
-let blob = new Blob([csv], { type: 'text/csv' })
-let url = URL.createObjectURL(blob)
-
-let a = document.createElement("a")
-a.href = url
-a.download = "processed_data.csv"
+if(!window.cleanedData)return
+let csv="Name,Age\n"+window.cleanedData.map(r=>`${r.name},${r.age}`).join("\n")
+let blob=new Blob([csv])
+let a=document.createElement("a")
+a.href=URL.createObjectURL(blob)
+a.download="data.csv"
 a.click()
 }
 
-function clearData(){
-document.getElementById("rawData").value=""
-document.getElementById("output").innerText=""
-document.getElementById("summary").innerText=""
-document.getElementById("errorLog").innerText=""
+function clearAutomation(){
+rawData.value=""
+output.innerText=""
+summary.innerText=""
+errorLog.innerText=""
 }
 
-particlesJS("particles-js",{
-particles:{
-number:{value:50},
-color:{value:"#3b82f6"},
-shape:{type:"circle"},
-opacity:{value:0.25},
-size:{value:3},
-line_linked:{enable:true,color:"#3b82f6",opacity:0.15},
-move:{speed:0.7}
+// ANALYTICS
+let chart
+
+function processCSV(){
+let file=fileInput.files[0]
+if(!file)return alert("Upload CSV")
+
+let reader=new FileReader()
+
+reader.onload=e=>{
+let rows=e.target.result.split("\n").map(r=>r.split(","))
+let data=rows.slice(1)
+
+let labels=[],values=[]
+
+data.forEach(r=>{
+let v=parseFloat(r[1])
+if(r[0]&&!isNaN(v)){
+labels.push(r[0])
+values.push(v)
 }
 })
 
-ScrollReveal().reveal('section',{
-distance:'60px',
-duration:1200,
-origin:'bottom',
-interval:200
+renderChart(labels,values)
+
+let total=values.reduce((a,b)=>a+b,0)
+let avg=(total/values.length).toFixed(2)
+
+insight.innerText=`Total:${total} | Avg:${avg} | Max:${Math.max(...values)} | Min:${Math.min(...values)}`
+
+outputCSV.innerText=data.map((r,i)=>`${i+1}. ${r.join(" | ")}`).join("\n")
+}
+
+reader.readAsText(file)
+}
+
+function renderChart(labels,data){
+if(chart)chart.destroy()
+chart=new Chart(document.getElementById("chart"),{
+type:"bar",
+data:{labels:labels,datasets:[{label:"Data",data:data}]}
 })
+}
+
+function clearAnalytics(){
+fileInput.value=""
+outputCSV.innerText=""
+insight.innerText=""
+if(chart)chart.destroy()
+}
+
+// EFFECT
+particlesJS("particles-js",{particles:{number:{value:50},color:{value:"#3b82f6"},line_linked:{enable:true}}})
+ScrollReveal().reveal('section',{distance:'60px',duration:1200,origin:'bottom',interval:200})
 
 </script>
 
