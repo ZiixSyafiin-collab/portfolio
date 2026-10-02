@@ -3,253 +3,166 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fauzi | Full-Stack Developer & Business Automation</title>
-
+<meta name="description" content="Fauzi - Full-Stack Developer, Business Systems & Automation Portfolio">
+<title>Fauzi | Developer Portfolio</title>
 <script src="https://cdn.tailwindcss.com"></script>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
 <style>
-body{font-family:Inter,sans-serif;background:#ffffff;color:#0f172a}
-.card{background:#071a2f;color:#ffffff;padding:20px;border-radius:16px;border:1px solid #12385f;box-shadow:0 10px 28px rgba(15,23,42,.10)}
-input,select{color:black}
-
-#demoBox{
-border:1px solid #1e293b;
-box-shadow:0 0 20px rgba(56,189,248,0.1);
-}
+:root{--bg:#080f22;--panel:#0b1530;--panel2:#0d1938;--line:#1e2d57;--cyan:#16c7ff;--green:#42e6a4;--pink:#f472b6;--muted:#9ba9c7}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:#eef4ff;font-family:Poppins,sans-serif}
+.code{font-family:"Fira Code",monospace}
+.wrap{max-width:1180px;margin:auto}
+.panel{background:linear-gradient(145deg,var(--panel),#09132b);border:1px solid var(--line);border-radius:10px;box-shadow:0 15px 40px rgba(0,0,0,.16)}
+.navlink{color:#aebbd3;font-size:12px}.navlink:hover{color:var(--green)}
+.accent{color:var(--green)} .cyan{color:var(--cyan)} .pink{color:var(--pink)}
+.tag{border:1px solid #29416c;background:#0c1936;padding:7px 10px;border-radius:7px;color:#b9c8e7;font-size:11px}
+.stat{background:#09152e;border:1px solid #1d2d55;border-radius:8px;padding:18px}
+.btn{display:inline-flex;align-items:center;justify-content:center;border:1px solid #7c3aed;color:#fff;border-radius:999px;padding:9px 18px;font-size:11px;transition:.2s}
+.btn:hover{background:#7c3aed}
+.windowbar{height:46px;border-bottom:1px solid #263664;display:flex;align-items:center;padding:0 18px}
+.dot{width:10px;height:10px;border-radius:50%;margin-right:7px}
+.avatar{width:112px;height:112px;border-radius:50%;border:4px solid rgba(255,255,255,.08);object-fit:cover;background:#d1d5db}
+.gridline{background-image:linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px);background-size:24px 24px}
+.skillbar{height:7px;background:#172443;border-radius:999px;overflow:hidden}.skillbar span{display:block;height:100%;background:linear-gradient(90deg,var(--green),var(--cyan))}
+.project:hover{transform:translateY(-3px);border-color:#31518a}.project{transition:.2s}
+.section-title{display:flex;align-items:center;gap:14px;color:#dfe8fb;font-size:13px}.section-title:before,.section-title:after{content:"";height:1px;background:#1b2a50;flex:1}
+@media(max-width:768px){.desktop-nav{display:none}.hero-grid{grid-template-columns:1fr!important}}
 </style>
 </head>
+<body class="gridline">
 
-<body class="space-y-24 bg-white">
+<header class="border-b border-slate-800/70">
+  <div class="wrap px-5 h-16 flex items-center justify-between">
+    <a href="#home" class="text-lg font-semibold accent">@ziixsyafiin-collab</a>
+    <nav class="desktop-nav flex gap-8">
+      <a class="navlink" href="#projects">Projects</a>
+      <a class="navlink" href="#stats">Stats</a>
+      <a class="navlink" href="#skills">Skills</a>
+      <a class="navlink" href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
 
-<!-- HERO -->
-<section class="h-screen flex flex-col justify-center items-center text-center px-6 bg-[#071a2f] text-white">
-<p class="text-green-400 font-semibold mb-3">AVAILABLE FOR FREELANCE & REMOTE PROJECTS</p>
-<h1 class="text-5xl font-bold mb-4">Hi, I'm Fauzi</h1>
-<p class="text-slate-500 max-w-xl">
-Full-Stack Developer & Business Automation.
-I build practical business applications, POS & ERP systems, inventory solutions, dashboards, and automation tools.
-</p>
-</section>
+<main id="home" class="wrap px-5 py-12">
+  <section class="hero-grid grid grid-cols-[.9fr_1.1fr] gap-10 items-stretch">
+    <div class="panel p-8 text-center flex flex-col items-center justify-center">
+      <div class="avatar flex items-center justify-center text-4xl font-bold text-slate-700">F</div>
+      <h1 class="mt-5 text-2xl font-semibold">Mohammad Fauzi</h1>
+      <p class="accent text-sm mt-1">Full-Stack Developer</p>
+      <p class="text-slate-400 text-xs leading-6 max-w-sm mt-4">
+        I build practical business applications, POS & ERP systems, inventory solutions,
+        dashboards and automation tools for real operational needs.
+      </p>
+      <div class="flex gap-4 mt-5 text-sm">
+        <a href="https://github.com/ziixsyafiin-collab" target="_blank" class="cyan">GitHub</a>
+        <a href="mailto:mohfauzi12@gmail.com" class="cyan">Email</a>
+        <a href="https://wa.me/6283169833751" target="_blank" class="cyan">WhatsApp</a>
+      </div>
+      <a href="#projects" class="btn mt-6">VIEW PROJECTS ↓</a>
+    </div>
 
-<!-- ABOUT -->
-<section class="py-20 max-w-4xl mx-auto px-6 text-center">
-<h2 class="text-3xl font-bold mb-6">About Me</h2>
-<p class="text-slate-500">
-I build practical business software around real operational needs, covering backend development, databases, APIs, frontend implementation, data processing, testing, debugging, and deployment.
-</p>
-</section>
+    <div class="panel overflow-hidden">
+      <div class="windowbar">
+        <span class="dot bg-red-400"></span><span class="dot bg-yellow-400"></span><span class="dot bg-green-400"></span>
+      </div>
+      <div class="p-7 code text-xs md:text-sm leading-7 overflow-x-auto">
+<pre><span class="pink">const</span> developer = {
+  <span class="pink">name</span>: <span class="accent">'Mohammad Fauzi'</span>,
+  <span class="pink">location</span>: <span class="accent">'Garut, West Java, Indonesia'</span>,
+  <span class="pink">role</span>: <span class="accent">'Full-Stack Developer'</span>,
+  <span class="pink">focus</span>: [
+    <span class="accent">'Business Applications'</span>,
+    <span class="accent">'POS & ERP Systems'</span>,
+    <span class="accent">'Inventory & COGS'</span>,
+    <span class="accent">'Automation'</span>
+  ],
+  <span class="pink">skills</span>: [
+    <span class="cyan">'Python'</span>, <span class="cyan">'Flask'</span>, <span class="cyan">'SQL'</span>,
+    <span class="cyan">'JavaScript'</span>, <span class="cyan">'HTML/CSS'</span>,
+    <span class="cyan">'REST API'</span>, <span class="cyan">'Excel/CSV'</span>
+  ],
+  <span class="pink">available</span>: <span class="accent">true</span>
+};</pre>
+      </div>
+    </div>
+  </section>
 
-<!-- SKILLS -->
-<section class="py-20 max-w-5xl mx-auto px-6">
-<h2 class="text-3xl font-bold text-center mb-4">Skills</h2>
-<p class="text-center text-slate-500 mb-12">Python · Flask · SQL · HTML · CSS · JavaScript · REST API · Excel/CSV · WordPress · Cloudflare</p>
-<div class="grid md:grid-cols-3 gap-6 text-center">
-<div class="card"><h3>Python</h3><p class="text-slate-500 text-sm">Automation & data processing</p></div>
-<div class="card"><h3>SQL</h3><p class="text-slate-500 text-sm">Data analysis & querying</p></div>
-<div class="card"><h3>Full-Stack Web</h3><p class="text-slate-500 text-sm">Flask, HTML, CSS, JavaScript & REST APIs</p></div>
-</div>
-</section>
+  <div class="section-title my-14"><span class="px-4 py-2 border border-violet-800/60 rounded bg-[#10152f]">Developer Overview</span></div>
 
-<!-- PROJECTS -->
-<section class="py-20 max-w-5xl mx-auto px-6">
-<h2 class="text-3xl font-bold text-center mb-12">Projects</h2>
-<div class="grid md:grid-cols-3 gap-6">
-<div class="card"><h3>DBro Store Control</h3><p class="text-slate-500 text-sm">POS, ERP, inventory, COGS and business analytics system</p></div>
-<div class="card"><h3>POS & Inventory System</h3><p class="text-slate-500 text-sm">Sales, shifts, payments, stock usage and transaction history</p></div>
-<div class="card"><h3>Business Analytics Dashboard</h3><p class="text-slate-500 text-sm">Revenue, product performance and operational reporting</p></div>
-</div>
-</section>
+  <section id="stats" class="panel p-6">
+    <div class="grid md:grid-cols-4 gap-4">
+      <div class="stat"><p class="text-slate-400 text-xs">Primary Focus</p><h3 class="cyan font-semibold mt-2">Business Systems</h3></div>
+      <div class="stat"><p class="text-slate-400 text-xs">Backend</p><h3 class="cyan font-semibold mt-2">Python / Flask</h3></div>
+      <div class="stat"><p class="text-slate-400 text-xs">Database</p><h3 class="cyan font-semibold mt-2">SQL</h3></div>
+      <div class="stat"><p class="text-slate-400 text-xs">Availability</p><h3 class="accent font-semibold mt-2">Freelance / Remote</h3></div>
+    </div>
+  </section>
 
-<!-- BEFORE AFTER -->
-<section class="py-20 max-w-5xl mx-auto px-6">
-<h2 class="text-3xl font-bold text-center mb-12">What I Can Build</h2>
-<div class="grid md:grid-cols-2 gap-8">
-<div class="card border border-red-700">
-<h3 class="text-green-400">Business Systems</h3>
-<ul class="text-sm"><li>POS & ERP</li><li>Inventory & COGS</li><li>Internal Applications</li></ul>
-</div>
-<div class="card border border-green-700">
-<h3 class="text-green-400">Automation & Integration</h3>
-<ul class="text-sm"><li>Dashboards</li><li>API Integration</li><li>Excel/CSV Automation</li></ul>
-</div>
-</div>
-</section>
+  <div id="projects" class="section-title my-14"><span class="px-4 py-2 border border-violet-800/60 rounded bg-[#10152f]">Featured Projects</span></div>
 
-<!-- DEMO -->
-<section class="py-20 text-center max-w-xl mx-auto">
-<h2 class="text-3xl font-bold mb-6">Financial Automation Demo</h2>
-<p class="text-slate-500 text-sm">
-Simple financial simulation to demonstrate automated calculations such as fee, tax, and profit adjustments.
-</p>
+  <section class="grid md:grid-cols-2 gap-5">
+    <article class="panel project p-6">
+      <div class="flex justify-between gap-4"><h3 class="cyan font-semibold">DBro Store Control</h3><span class="accent text-xs">FULL-STACK</span></div>
+      <p class="text-slate-400 text-xs leading-6 mt-4">Centralized web-based business system for sales, store operations, inventory, COGS and management reporting.</p>
+      <div class="flex flex-wrap gap-2 mt-5"><span class="tag">POS</span><span class="tag">ERP</span><span class="tag">Inventory</span><span class="tag">Dashboard</span></div>
+    </article>
 
-<div class="card text-left">
-<input id="demoInput" type="number" placeholder="Enter value" class="w-full p-3 mb-4 rounded text-black">
+    <article class="panel project p-6">
+      <div class="flex justify-between gap-4"><h3 class="cyan font-semibold">POS & Inventory System</h3><span class="accent text-xs">OPERATIONS</span></div>
+      <p class="text-slate-400 text-xs leading-6 mt-4">Sales workflow covering transactions, manual shifts, payment methods, service methods, history and stock usage.</p>
+      <div class="flex flex-wrap gap-2 mt-5"><span class="tag">Sales</span><span class="tag">Shift</span><span class="tag">Payments</span><span class="tag">Stock</span></div>
+    </article>
 
-<button onclick="runDemo()" class="bg-sky-500 px-6 py-2 rounded w-full">
-Run Automation
-</button>
+    <article class="panel project p-6">
+      <div class="flex justify-between gap-4"><h3 class="cyan font-semibold">COGS & Stock Management</h3><span class="accent text-xs">AUTOMATION</span></div>
+      <p class="text-slate-400 text-xs leading-6 mt-4">Inventory consumption and reconciliation logic for comparing system stock usage with actual operational stock.</p>
+      <div class="flex flex-wrap gap-2 mt-5"><span class="tag">COGS</span><span class="tag">Reconciliation</span><span class="tag">Automation</span></div>
+    </article>
 
-<div id="demoBox" class="mt-6 p-4 rounded bg-slate-900 hidden">
-<p class="text-slate-500 text-sm mb-1">Automation Result</p>
-<p id="demoResult" class="text-white text-xl font-semibold"></p>
-</div>
-</div>
-</section>
+    <article class="panel project p-6">
+      <div class="flex justify-between gap-4"><h3 class="cyan font-semibold">Business Analytics Dashboard</h3><span class="accent text-xs">ANALYTICS</span></div>
+      <p class="text-slate-400 text-xs leading-6 mt-4">Management dashboard for revenue, transactions, payment mix, product performance and operational reporting.</p>
+      <div class="flex flex-wrap gap-2 mt-5"><span class="tag">Analytics</span><span class="tag">Revenue</span><span class="tag">Reports</span></div>
+    </article>
+  </section>
 
-<!-- MINI ERP -->
-<section class="py-20 max-w-5xl mx-auto px-6">
-<h2 class="text-3xl font-bold text-center mb-8">Mini ERP Finance System</h2>
+  <div id="skills" class="section-title my-14"><span class="px-4 py-2 border border-violet-800/60 rounded bg-[#10152f]">Technical Skills</span></div>
 
-<div class="card mb-4 grid md:grid-cols-5 gap-2">
-<input id="date" type="date" class="text-black p-2">
-<input id="name" placeholder="Description" class="text-black p-2">
-<input id="amount" type="number" placeholder="Amount" class="text-black p-2">
-<select id="type" class="text-black p-2">
-<option value="income">Income</option>
-<option value="expense">Expense</option>
-</select>
-<button onclick="addData()" class="bg-green-500 px-4 py-2 rounded">Add</button>
-</div>
+  <section class="grid md:grid-cols-2 gap-5">
+    <div class="panel p-6">
+      <div class="space-y-5 text-xs">
+        <div><div class="flex justify-between mb-2"><span>Python / Flask</span><span class="accent">Backend</span></div><div class="skillbar"><span style="width:92%"></span></div></div>
+        <div><div class="flex justify-between mb-2"><span>SQL / Database</span><span class="accent">Data</span></div><div class="skillbar"><span style="width:88%"></span></div></div>
+        <div><div class="flex justify-between mb-2"><span>HTML / CSS / JavaScript</span><span class="accent">Frontend</span></div><div class="skillbar"><span style="width:85%"></span></div></div>
+        <div><div class="flex justify-between mb-2"><span>Excel / CSV Processing</span><span class="accent">Automation</span></div><div class="skillbar"><span style="width:90%"></span></div></div>
+      </div>
+    </div>
+    <div class="panel p-6">
+      <h3 class="cyan font-semibold mb-5">Additional Experience</h3>
+      <div class="flex flex-wrap gap-2">
+        <span class="tag">REST API</span><span class="tag">WordPress</span><span class="tag">Cloudflare</span>
+        <span class="tag">DNS</span><span class="tag">Business Email</span><span class="tag">Testing</span>
+        <span class="tag">Debugging</span><span class="tag">Deployment</span><span class="tag">Canva</span>
+      </div>
+      <p class="text-slate-400 text-xs leading-6 mt-6">Focused on understanding business processes and converting them into practical, maintainable digital solutions.</p>
+    </div>
+  </section>
 
-<div class="grid md:grid-cols-3 gap-4 mb-4 text-center">
-<div class="card"><p>Total Income</p><h3 id="income" class="text-green-400">Rp 0</h3></div>
-<div class="card"><p>Total Expense</p><h3 id="expense" class="text-red-400">Rp 0</h3></div>
-<div class="card"><p>Balance</p><h3 id="balance">Rp 0</h3></div>
-</div>
+  <div id="contact" class="section-title my-14"><span class="px-4 py-2 border border-violet-800/60 rounded bg-[#10152f]">Contact</span></div>
 
-<div class="card overflow-auto">
-<table id="erpTable" class="w-full text-sm"></table>
-</div>
+  <section class="panel p-8 text-center">
+    <p class="accent text-xs mb-3">AVAILABLE FOR FREELANCE & REMOTE PROJECTS</p>
+    <h2 class="text-2xl font-semibold">Let's build something useful.</h2>
+    <p class="text-slate-400 text-xs mt-3">Business applications, POS/ERP, dashboards, automation, database systems and web development.</p>
+    <div class="flex flex-wrap justify-center gap-3 mt-6">
+      <a class="btn" href="mailto:mohfauzi12@gmail.com">EMAIL ME</a>
+      <a class="btn" href="https://wa.me/6283169833751" target="_blank">WHATSAPP</a>
+      <a class="btn" href="https://github.com/ziixsyafiin-collab" target="_blank">GITHUB</a>
+    </div>
+  </section>
+</main>
 
-<div class="flex gap-2 mt-4">
-<button onclick="exportCSV()" class="bg-indigo-500 px-4 py-2 rounded">
-Export Report
-</button>
-
-<button onclick="clearData()" class="bg-red-500 hover:bg-red-600 transition px-4 py-2 rounded">
-Clear Data
-</button>
-</div>
-
-</section>
-
-<!-- CONTACT -->
-<section class="py-20 text-center">
-<h2 class="text-3xl font-bold mb-4">Contact</h2>
-<p>Email: mohfauzi12@gmail.com</p>
-<p>WhatsApp: +62 831-6983-3751</p>
-<p>GitHub: github.com/ziixsyafiin-collab</p>
-</section>
-
-<script>
-
-// DEMO
-function runDemo(){
-let val=document.getElementById("demoInput").value;
-let box=document.getElementById("demoBox");
-let result=document.getElementById("demoResult");
-
-if(val === "" || isNaN(val)){
-alert("Please enter valid number");
-return;
-}
-
-box.classList.remove("hidden");
-result.innerText="Processing...";
-
-setTimeout(()=>{
-let output=(val*1.1).toFixed(2);
-result.innerText="Rp "+Number(output).toLocaleString("id-ID");
-},800);
-}
-
-// ERP
-let erpData=[];
-
-function formatRupiah(num){
-return "Rp " + Number(num).toLocaleString("id-ID");
-}
-
-function addData(){
-let date=document.getElementById("date").value;
-let name=document.getElementById("name").value;
-let amount=parseFloat(document.getElementById("amount").value);
-let type=document.getElementById("type").value;
-
-if(!date || !name || isNaN(amount)){
-alert("Lengkapi data!");
-return;
-}
-
-amount=Math.abs(amount);
-
-erpData.push({date,name,amount,type});
-renderERP();
-
-document.getElementById("name").value="";
-document.getElementById("amount").value="";
-document.getElementById("date").value="";
-}
-
-function renderERP(){
-let t=document.getElementById("erpTable");
-
-t.innerHTML=`
-<tr>
-<th>Date</th><th>Description</th><th>Type</th><th>Amount</th><th>Action</th>
-</tr>`;
-
-let income=0,expense=0;
-
-erpData.forEach((d,i)=>{
-if(d.type==="income"){income+=d.amount}else{expense+=d.amount}
-
-t.innerHTML+=`
-<tr>
-<td>${d.date}</td>
-<td>${d.name}</td>
-<td class="${d.type==="income"?"text-green-400":"text-red-400"}">${d.type}</td>
-<td>${formatRupiah(d.amount)}</td>
-<td><button onclick="deleteData(${i})" class="text-red-400">Delete</button></td>
-</tr>`;
-});
-
-if(erpData.length===0){
-t.innerHTML+=`<tr><td colspan="5" class="text-center text-slate-500">No data</td></tr>`;
-}
-
-document.getElementById("income").innerText=formatRupiah(income);
-document.getElementById("expense").innerText=formatRupiah(expense);
-document.getElementById("balance").innerText=formatRupiah(income-expense);
-}
-
-function deleteData(i){
-erpData.splice(i,1);
-renderERP();
-}
-
-function clearData(){
-if(!confirm("Are you sure to delete this data ?")) return;
-erpData=[];
-renderERP();
-}
-
-function exportCSV(){
-let csv="Date,Description,Type,Amount\n";
-erpData.forEach(d=>{
-csv+=`${d.date},${d.name},${d.type},${d.amount}\n`;
-});
-
-let blob=new Blob([csv]);
-let a=document.createElement("a");
-a.href=URL.createObjectURL(blob);
-a.download="finance_report.csv";
-a.click();
-}
-
-</script>
-
+<footer class="text-center text-slate-600 text-xs py-10">© 2026 Mohammad Fauzi · Full-Stack Developer</footer>
 </body>
 </html>
